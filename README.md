@@ -1,2 +1,22 @@
-# foosbot
+# Foosbot
 Auto scoring foosball bot for raspberry pi
+
+Uses the following components:
+Raspberry Pi with wifi. I used a Pi 2 B+ with an external wifi adapter, but the Pi 3 has wifi and bluetooth built in, so I'd recommend it. There is a starter pack on AdaFruit that comes with the Pi 3 and lots of handy accessories: https://www.adafruit.com/products/3058
+
+The power supply is required. The breadboard, jumper wires, buttons, and LEDs are very handy for prototyping your projects.
+
+2 IR break beam sensors. We used these 3mm sensors from AdaFruit: https://www.adafruit.com/products/2167
+
+1 button for resetting an unfinished game. You could probably do it in software, but I had some buttons laying around and hardware buttons are nice, especially if something goes wrong :)
+
+Input and display. You can use any USB keyboard/mouse and HDMI monitor. For this project we used a small, Pi-mountable touchscreen: https://www.adafruit.com/products/1601
+
+If I were doing it again, I would use this larger, higher-res version:
+https://www.adafruit.com/products/2097
+
+The GPIO mapping is:
+21 - hardware reset button
+20 - break-beam IR sensor
+26 - break-beam IR sensor
+
