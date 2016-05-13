@@ -1,0 +1,37 @@
+$def with (user_data)
+
+<form id="enter_foos_game" action="/game" method="POST">
+    <fieldset>
+        <span class="blackbg">&nbsp;</span><span class="player-name">Player 1:</span>
+        <select name="b1">
+            <option value="none">None</option>
+            $for user in user_data
+                <option value="$user[u'username']">$user[u'username'] : $user[u'mmr']</option>
+        </select>
+        <br/>
+        <span class="blackbg">&nbsp;</span><span class="player-name">Player 2:</span>
+        <select name="b2">
+            <option value="none">None</option>
+            $for user in user_data
+                <option value="$user[u'username']">$user[u'username'] : $user[u'mmr']</option>
+        </select>
+    </fieldset>
+    <br>
+    <fieldset>
+        <span class="redbg">&nbsp;</span><span class="player-name">Player 1:</span>
+        <select name="r1">
+            <option value="none">None</option>
+            $for user in user_data
+                <option value="$user[u'username']">$user[u'username'] : $user[u'mmr']</option>
+        </select>
+        <br/>
+        <span class="redbg">&nbsp;</span><span class="player-name">Player 2:</span>
+        <select name="r2">
+            <option value="none">None</option>
+            $for user in user_data
+                <option value="$user[u'username']">$user[u'username'] : $user[u'mmr']</option>
+        </select>
+    </fieldset>
+    <br>
+    <button value="start_game" form="enter_foos_game" type="submit">Start Game</button>
+</form>

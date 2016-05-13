@@ -1,0 +1,74 @@
+$def with (content)
+
+$# All css defined here
+$# Black is always displayed on the left
+$# Red is always on the right
+
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <title>FoosBot</title>
+    <style>
+        body {
+            font-size:12px; 
+        }
+        .black {
+            color:black;
+        }
+        .red {
+            color:red;
+        }
+        .blackbg {
+            background-color:black;
+        }
+        .redbg {
+            background-color:red;
+        }
+        .left {
+            float:left;
+            width:42%;
+        }
+        .right {
+            float:right;
+            width:42%;
+        }
+        .center {
+            margin:0 auto;
+            text-align:center;
+        }  
+        .player {  
+            font-size:12px;
+        }
+        .score {  
+            font-family: 'VT323', sans-serif;
+            font-size:120px;
+        }
+        .clear {
+            clear:both;
+        }
+        .full {
+            width:100%;
+        }
+        button {
+            color:white;
+            background-color: #3388CC;
+            border-radius:3px;
+            text-align:center;
+            cursor:pointer;
+            outline:none;
+            border:none;
+            font-weight:500;
+            margin:4px;
+            font-size: 14px;
+            min-width:75px;
+            padding:4px 8px 7px 8px;
+        }
+    </style>
+</head>
+<body>
+
+$:content
+
+</body>
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,21 @@
+$def with (b1, b2, r1, r2, bs, rs)
+
+<form id="game_form" action='/game' method="POST">
+    <input type="hidden" name="b1" value="$b1">
+    <input type="hidden" name="b2" value="$b2">
+    <input type="hidden" name="bs" value="$bs">
+    <input type="hidden" name="r1" value="$r1">
+    <input type="hidden" name="r2" value="$r2">
+    <input type="hidden" name="rs" value="$rs">
+    <div class="left"><span class="blackbg">&nbsp;&nbsp;</span><span class="player">$b1<br>and<br>$b2</span></div>
+    <div class="right"><span class="redbg">&nbsp;&nbsp;</span><span class="player">$r1<br>and<br>$r2</span></div>
+    <div class="left black score">$bs</div>
+    <div class="right red score">$rs</div>
+    <!-- <div class="left black"><button id="blk-neg" onclick="document.getElementById('game_form').submit();"> - </button>&nbsp;<button id="blk-pos"> + </button></div>
+    <div class="left red"><button id="red-neg"> - </button>&nbsp;<button id="red-pos"> + </button></div> -->
+</form>
+<script type="text/javascript" defer="defer">
+        setTimeout(function() {
+                document.getElementById("game_form").submit();
+        },1500);
+</script>

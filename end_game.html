@@ -1,0 +1,17 @@
+$def with (b1, b2, r1, r2, bs, rs)
+
+<form id="submit_game" action="/submit_game" method="POST">
+    <h2>Final Score</h2>
+    <p><span class="blackbg">&nbsp;</span>$b1 and $b2: <span class="black">$bs</span></p>
+    <p><span class="redbg">&nbsp;</span>$r1 and $r2: <span class="red">$rs</span><br></p>
+    <input type="hidden" name="b1" value="$b1">
+    <input type="hidden" name="b2" value="$b2">
+    <input type="hidden" name="r1" value="$r1">
+    <input type="hidden" name="r2" value="$r2">
+    <input type="hidden" name="bs" value="$bs">
+    <input type="hidden" name="rs" value="$rs">
+    <button type="submit" form="submit_game" value="Submit">Submit Game</button>
+</form>
+<form id="reset" action="/" method="GET">
+    <button type="submit" value="reset" form="reset">Reset Game</button>
+</form>
